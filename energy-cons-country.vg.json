@@ -4,7 +4,7 @@
   "height": 800,
   "title": "Energy Consumption per Country Since 1965",
   "data": {
-    "url": "./data/bp-data-cleaned.csv"
+    "url": "bp-data-cleaned.csv"
   },
   "params": [],
   "transform": [],

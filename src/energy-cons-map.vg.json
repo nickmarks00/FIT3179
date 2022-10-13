@@ -13,7 +13,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "../data/per-capita-energy-use.csv"
+          "url": "./data/per-capita-energy-use.csv"
         },
         "key": "Country",
         "fields": ["Energy"]

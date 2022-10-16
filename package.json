@@ -1,0 +1,19 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/styles.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss-cli": "^10.0.0"
+  }
+}

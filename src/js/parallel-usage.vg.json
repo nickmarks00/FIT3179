@@ -37,14 +37,6 @@
       ],
       "groupby": ["key"]
     },
-    {
-      "calculate": "(datum.value - datum.min) / (datum.max-datum.min)",
-      "as": "norm_val"
-    },
-    {
-      "calculate": "(datum.min + datum.max) / 2",
-      "as": "mid"
-    },
     { "filter": "datum.Year == Year_selection" }
   ],
   "layer": [

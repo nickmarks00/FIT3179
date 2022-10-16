@@ -2,10 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Some description",
   "data": {
-    "url": "../data/parallel.csv"
+    "name": "Energy",
+    "url": "/src/data/parallel.csv"
   },
-  "width": 600,
-  "height": 300,
+  "width": "container",
+  "height": 400,
   "params": [
     {
       "name": "Year_selection",
@@ -17,25 +18,53 @@
         "step": 1,
         "name": "Year:   "
       }
+    },
+    {
+      "name": "continent_select",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America"
+        ],
+        "name": "Continent (select):  "
+      }
     }
   ],
   "transform": [
-    { "filter": "datum['Fossil fuel electricity per capita (kWh)']" },
+    { "filter": "datum['4 - GDP']" },
+    {
+      "filter": "continent_select == null || datum['Continent/region'] == continent_select"
+    },
     { "window": [{ "op": "count", "as": "index" }] },
     {
-      "fold": [
-        "Fossil fuel electricity per capita (kWh)",
-        "Nuclear electricity per capita (kWh)",
-        "Renewable electricity per capita (kWh)",
-        "GDP per capita"
-      ]
+      "fold": ["1 - Fossil Fuels", "3 - Nuclear", "2 - Renewable", "4 - GDP"]
     },
     {
       "joinaggregate": [
         { "op": "min", "field": "value", "as": "min" },
+        { "op": "mean", "field": "value", "as": "mid" },
         { "op": "max", "field": "value", "as": "max" }
       ],
       "groupby": ["key"]
+    },
+    {
+      "calculate": "(datum.value - datum.min) / (datum.max-datum.min)",
+      "as": "norm_val"
     },
     { "filter": "datum.Year == Year_selection" }
   ],
@@ -50,33 +79,63 @@
     {
       "mark": "line",
       "encoding": {
-        "color": { "type": "nominal", "field": "Continent_y" },
+        "color": { "type": "nominal", "field": "Continent/region" },
         "detail": { "type": "nominal", "field": "index" },
-        "opacity": { "value": 0.3 },
+        "opacity": { "value": 0.65 },
         "x": { "type": "nominal", "field": "key" },
-        "y": { "type": "quantitative", "field": "norm_val", "axis": null },
+        "y": { "type": "quantitative", "field": "value", "axis": null },
         "tooltip": [
           {
             "field": "Entity",
+            "title": "Country",
             "type": "nominal"
           },
           {
             "type": "quantitative",
-            "field": "GDP per capita"
+            "title": "GDP per capita ($USD)",
+            "field": "4 - GDP",
+            "format": ".0f"
           },
           {
             "type": "quantitative",
-            "field": "Fossil fuel electricity per capita (kWh)"
+            "title": "Fossil fuel energy usage per capita (kWh)",
+            "field": "1 - Fossil Fuels",
+            "format": ".0f"
           },
           {
             "type": "quantitative",
-            "field": "Nuclear electricity per capita (kWh)"
+            "title": "Renewable fuel energy usage per capita (kWh)",
+            "field": "2 - Renewable",
+            "format": ".0f"
           },
           {
             "type": "quantitative",
-            "field": "Renewable electricity per capita (kWh)"
+            "title": "Nuclear fuel energy usage per capita (kWh)",
+            "field": "3 - Nuclear",
+            "format": ".0f"
           }
         ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "field": "Country", "type": "nominal" },
+        "color": { "value": "black" },
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen' || datum['Country'] == 'United States'",
+            "value": 1
+          },
+          "value": 0
+        }
       }
     },
     {
@@ -88,7 +147,7 @@
         {
           "mark": { "type": "text", "style": "label" },
           "encoding": {
-            "text": { "aggregate": "max", "field": "max" }
+            "text": { "aggregate": "max", "field": "max", "format": ".0f" }
           }
         },
         {
@@ -110,7 +169,7 @@
         {
           "mark": { "type": "text", "style": "label" },
           "encoding": {
-            "text": { "aggregate": "min", "field": "mid" }
+            "text": { "aggregate": "max", "field": "mid", "format": ".0f" }
           }
         },
         {
@@ -132,7 +191,7 @@
         {
           "mark": { "type": "text", "style": "label" },
           "encoding": {
-            "text": { "aggregate": "min", "field": "min" }
+            "text": { "aggregate": "min", "field": "min", "format": ".0f" }
           }
         },
         {

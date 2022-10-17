@@ -1,10 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "title": "Exports and Imports from 2020",
-  "width": 600,
-  "height": 600,
   "signals": [
-    { "name": "cellSize", "value": 30 },
+    { "name": "cellSize", "value": 25 },
     { "name": "count", "update": "length(data('nodes'))" },
     { "name": "width", "update": "span(range('position'))" },
     { "name": "height", "update": "width" },
@@ -103,7 +101,7 @@
           "height": { "scale": "position", "band": 1, "offset": -1 },
           "fill": { "type": "sequential", "scale": "color", "field": "v" },
           "tooltip": {
-            "signal": "{title: datum.sourceNode.country_name_abbreviation + '➡️' + datum.targetNode.country_name_abbreviation, 'Value of trade (millions)': 'USD$' + format(datum.v, ',.0f')}"
+            "signal": "{title: datum.sourceNode.country_name_abbreviation + '➡️' + datum.targetNode.country_name_abbreviation, 'Value of trade (thousands)': 'USD$' + format(datum.v, ',.0f')}"
           }
         }
       }
@@ -150,10 +148,12 @@
   ],
   "legends": [
     {
-      "title": "Trade of energy (USD millions)",
+      "title": "Trade of energy (USD '000s)",
       "fill": "color",
       "type": "gradient",
       "format": ",.0f",
+      "direction": "horizontal",
+      "orient": "bottom",
       "gradientLength": { "signal": "clamp(height, 64, 200)" }
     }
   ]

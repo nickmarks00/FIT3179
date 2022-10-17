@@ -51,9 +51,7 @@
         "title": "Energy per capita (kWh)",
         "legend": {
           "direction": "horizontal",
-          "legendX": 350,
-          "legendY": 350,
-          "orient": "none"
+          "orient": "bottom"
         },
         "type": "quantitative",
         "scale": {

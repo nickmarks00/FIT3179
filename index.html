@@ -12,27 +12,98 @@
     <script src="./src/js/vegaLiteVis.js"></script>
     <link rel="stylesheet" href="./src/styles/styles.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Nick Marks Data Vis II</title>
   </head>
-  <body>
+  <body class="font-fira">
     <h1 class="text-center text-4xl font-bold m-4">
       Power Up! World Energy Usage
     </h1>
 
     <div class="flex flex-col m-8 space-y-20">
-      <div
-        class="w-full flex flex-col md:flex-row items-center justify-center m-8"
-      >
-        <div id="cons-map" class="w-2/5"></div>
-        <div id="cons-map-change" class="w-2/5"></div>
-      </div>
-      <div class="flex">
-        <div class="w-1/3">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-          aspernatur repudiandae earum minus doloremque, deserunt quasi optio
-          itaque nulla obcaecati.
+      <!-- Upper maps -->
+      <div class="flex flex-col">
+        <div class="flex justify-center space-20">
+          <div class="text-right mr-6 w-1/2">
+            Countries like
+            <span class="text-red-800 font-bold">Canada</span> and
+            <span class="text-red-800 font-bold">the USA</span> use a lot of
+            energy!<br /><br />Most of the lowest energy-users are in the
+            developing world.
+          </div>
+          <div class="text-left ml-6 w-1/2">
+            Energy is
+            <span class="text-blue-800 font-bold">trending down</span> in large
+            parts of Africa <br /><br />
+            ...but up across
+            <span class="text-red-800 font-bold">most of Asia!</span>
+          </div>
         </div>
+        <div
+          class="w-full flex flex-col md:flex-row items-center justify-center my-8"
+        >
+          <div id="cons-map" class="w-1/2"></div>
+          <div id="cons-map-change" class="w-1/2"></div>
+        </div>
+      </div>
+
+      <!-- Adjacency matrix -->
+      <div class="flex justify-center items-center">
+        <div class="w-1/4 m-4">
+          <h2 class="text-lg font-bold mb-4">
+            Where does the energy come from?
+          </h2>
+          <p class="mt-4">
+            To the right we have a network matrix showing the top 13 exporters
+            of trades related to energy consumption.
+          </p>
+
+          <p class="mt-12">
+            Countries like
+            <span class="text-blue-900 font-bold"
+              >the United Arab Emirates</span
+            >
+            export a lot of oil and fossil fuels across the globe
+          </p>
+        </div>
+        <div id="exports-imports" class="w-1/2"></div>
+        <div class="w-1/4">
+          <p class="mt-12">
+            The exports and imports are all from the 2020 calendar year, and
+            include:
+          </p>
+          <ul style="list-style: disc">
+            <li>Carbon and Coal</li>
+            <li>Various ores like iron</li>
+            <li>Exports of electrical energy (e.g. renewable energy)</li>
+            <li>Gas and natural gas</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Parallel plot -->
+      <div class="flex items-center">
         <div id="parallel-plot" class="w-2/3"></div>
+        <div class="w-1/3 ml-24">
+          <h2 class="text-lg font-bold mb-4">Who uses the most energy?</h2>
+          <p>
+            Countries from Europe tend to have the largest energy usage, but the
+            highest ratio of renewable energy. They also have some of the
+            highest GDP per capita.
+          </p>
+          <ul style="list-style: disc" class="mt-4">
+            <li>
+              Drag the year handle to see how the proportion varies over time
+            </li>
+            <li>Select your favourite continent to see how it shapes up!</li>
+          </ul>
+        </div>
       </div>
       <div id="cons-country"></div>
     </div>

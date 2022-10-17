@@ -8,6 +8,11 @@ vegaEmbed("#cons-map-change", vg2, { actions: false })
   .then((result) => {})
   .catch(console.error);
 
+const vg3 = "./src/js/exports-imports.vg.json";
+vegaEmbed("#exports-imports", vg3, { actions: false })
+  .then((result) => {})
+  .catch(console.error);
+
 const vg4 = "./src/js/parallel-usage.vg.json";
 vegaEmbed("#parallel-plot", vg4, { actions: false })
   .then((res) => {})

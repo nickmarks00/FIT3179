@@ -3,10 +3,10 @@
   "title": "Energy usage by type compared to country GDP per capita",
   "data": {
     "name": "Energy",
-    "url": "../data/parallel.csv"
+    "url": "https://raw.githubusercontent.com/nickmarks00/FIT3179/main/src/data/parallel.csv"
   },
-  "width": 800,
-  "height": 400,
+  "width": 600,
+  "height": 300,
   "params": [
     {
       "name": "Year_selection",

@@ -2,7 +2,9 @@
 module.exports = {
   content: ["./index.html"],
   theme: {
-    extend: {},
+    fontFamily: {
+      fira: ["Fira Sans", "sans-serif"],
+    },
   },
   plugins: [],
 };

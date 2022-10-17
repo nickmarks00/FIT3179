@@ -1,14 +1,14 @@
 index,country_code,country_name_abbreviation,country_name_full,iso_2digit_alpha,iso_3digit_alpha
-9,36,Australia,Australia,AU,AUS
-35,124,Canada,Canada,CA,CAN
-42,156,China,China,CN,CHN
-70,251,France,"France, Monaco",FR,FRA
-78,276,Germany,Germany,DE,DEU
-96,360,Indonesia,Indonesia,ID,IDN
-173,643,Russian Federation,Russian Federation,RU,RUS
-184,682,Saudi Arabia,Saudi Arabia,SA,SAU
-190,699,India,India,IN,IND
-196,710,South Africa,South Africa,ZA,ZAF
-214,784,United Arab Emirates,United Arab Emirates,AE,ARE
-225,826,United Kingdom,United Kingdom,GB,GBR
-227,842,USA,"USA, Puerto Rico and US Virgin Islands",US,USA
+0,36,Australia,Australia,AU,AUS
+1,124,Canada,Canada,CA,CAN
+2,156,China,China,CN,CHN
+3,251,France,"France, Monaco",FR,FRA
+4,276,Germany,Germany,DE,DEU
+5,360,Indonesia,Indonesia,ID,IDN
+6,643,Russian Federation,Russian Federation,RU,RUS
+7,682,Saudi Arabia,Saudi Arabia,SA,SAU
+8,699,India,India,IN,IND
+9,710,South Africa,South Africa,ZA,ZAF
+10,784,United Arab Emirates,United Arab Emirates,AE,ARE
+11,826,United Kingdom,United Kingdom,GB,GBR
+12,842,USA,"USA, Puerto Rico and US Virgin Islands",US,USA

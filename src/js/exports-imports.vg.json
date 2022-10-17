@@ -36,25 +36,7 @@
     {
       "name": "nodes",
       "url": "/../data/country_nodes.csv",
-      "format": { "type": "csv", "property": "nodes" },
-      "transform": [
-        {
-          "type": "formula",
-          "as": "order",
-          "expr": "datum.v"
-        },
-        {
-          "type": "formula",
-          "as": "score",
-          "expr": "dest >= 0 && datum === src ? dest : datum.order"
-        },
-        {
-          "type": "window",
-          "sort": { "field": "score" },
-          "ops": ["row_number"],
-          "as": ["order"]
-        }
-      ]
+      "format": { "type": "csv", "property": "nodes" }
     },
     {
       "name": "edges",
@@ -64,7 +46,7 @@
         {
           "type": "lookup",
           "from": "nodes",
-          "key": "index",
+          "key": "country_code",
           "fields": ["i", "j"],
           "as": ["sourceNode", "targetNode"]
         }
@@ -80,15 +62,15 @@
     {
       "name": "position",
       "type": "band",
-      "domain": { "data": "nodes", "field": "country_code", "sort": true },
+      "domain": { "data": "nodes", "field": "index", "sort": true },
       "range": { "step": { "signal": "cellSize" } }
     },
     {
       "name": "color",
-      "type": "sequential",
+      "type": "ordinal",
       "range": "heatmap",
       "domain": {
-        "fields": [{ "data": "edges", "field": "v" }, { "signal": "count" }],
+        "fields": [{ "data": "edges", "field": "v" }],
         "sort": true
       }
     }
@@ -99,8 +81,8 @@
       "from": { "data": "cross" },
       "encode": {
         "update": {
-          "x": { "scale": "position", "field": "a.country_code" },
-          "y": { "scale": "position", "field": "b.country_code" },
+          "x": { "scale": "position", "field": "a.index" },
+          "y": { "scale": "position", "field": "b.index" },
           "width": { "scale": "position", "band": 1, "offset": -1 },
           "height": { "scale": "position", "band": 1, "offset": -1 },
           "fill": [
@@ -114,11 +96,13 @@
       "type": "rect",
       "from": { "data": "edges" },
       "encode": {
-        "x": { "scale": "position", "field": "targetNode.country_code" },
-        "y": { "scale": "position", "field": "sourceNode.country_code" },
-        "width": { "scale": "position", "band": 1, "offset": -1 },
-        "height": { "scale": "position", "band": 1, "offset": -1 },
-        "fill": { "type": "sequential", "scale": "color", "field": "v" }
+        "update": {
+          "x": { "scale": "position", "field": "targetNode.index" },
+          "y": { "scale": "position", "field": "sourceNode.index" },
+          "width": { "scale": "position", "band": 1, "offset": -1 },
+          "height": { "scale": "position", "band": 1, "offset": -1 },
+          "fill": { "type": "sequential", "scale": "color", "field": "v" }
+        }
       }
     },
     {
@@ -127,7 +111,7 @@
       "from": { "data": "nodes" },
       "encode": {
         "update": {
-          "x": { "scale": "position", "field": "country_code", "band": 0.5 },
+          "x": { "scale": "position", "field": "index", "band": 0.5 },
           "y": { "offset": -2 },
           "text": { "field": "country_name_abbreviation" },
           "fontSize": { "value": 10 },
@@ -148,7 +132,7 @@
       "encode": {
         "update": {
           "x": { "offset": -2 },
-          "y": { "scale": "position", "field": "country_code", "band": 0.5 },
+          "y": { "scale": "position", "field": "index", "band": 0.5 },
           "text": { "field": "country_name_abbreviation" },
           "fontSize": { "value": 10 },
           "align": { "value": "right" },

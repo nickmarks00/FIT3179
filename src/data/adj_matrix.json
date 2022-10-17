@@ -1,0 +1,1007 @@
+{
+  "links": [
+    {
+      "index": 0,
+      "source": 36,
+      "target": 124,
+      "value": 31338.032
+    },
+    {
+      "index": 1,
+      "source": 36,
+      "target": 156,
+      "value": 69373180.002
+    },
+    {
+      "index": 2,
+      "source": 36,
+      "target": 251,
+      "value": 7384.54
+    },
+    {
+      "index": 3,
+      "source": 36,
+      "target": 276,
+      "value": 271944.82700000005
+    },
+    {
+      "index": 4,
+      "source": 36,
+      "target": 360,
+      "value": 805869.135
+    },
+    {
+      "index": 5,
+      "source": 36,
+      "target": 643,
+      "value": 2249.829
+    },
+    {
+      "index": 6,
+      "source": 36,
+      "target": 682,
+      "value": 19999.964
+    },
+    {
+      "index": 7,
+      "source": 36,
+      "target": 699,
+      "value": 381591.62100000004
+    },
+    {
+      "index": 8,
+      "source": 36,
+      "target": 710,
+      "value": 18989.372
+    },
+    {
+      "index": 9,
+      "source": 36,
+      "target": 784,
+      "value": 68132.928
+    },
+    {
+      "index": 10,
+      "source": 36,
+      "target": 826,
+      "value": 136274.627
+    },
+    {
+      "index": 11,
+      "source": 36,
+      "target": 842,
+      "value": 161932.592
+    },
+    {
+      "index": 12,
+      "source": 124,
+      "target": 36,
+      "value": 41141.17
+    },
+    {
+      "index": 13,
+      "source": 124,
+      "target": 156,
+      "value": 3302740.709
+    },
+    {
+      "index": 14,
+      "source": 124,
+      "target": 251,
+      "value": 518001.493
+    },
+    {
+      "index": 15,
+      "source": 124,
+      "target": 276,
+      "value": 1273323.061
+    },
+    {
+      "index": 16,
+      "source": 124,
+      "target": 360,
+      "value": 46700.415
+    },
+    {
+      "index": 17,
+      "source": 124,
+      "target": 643,
+      "value": 35942.057
+    },
+    {
+      "index": 18,
+      "source": 124,
+      "target": 682,
+      "value": 3701.717
+    },
+    {
+      "index": 19,
+      "source": 124,
+      "target": 699,
+      "value": 181668.886
+    },
+    {
+      "index": 20,
+      "source": 124,
+      "target": 710,
+      "value": 9342.833999999999
+    },
+    {
+      "index": 21,
+      "source": 124,
+      "target": 784,
+      "value": 5744.058
+    },
+    {
+      "index": 22,
+      "source": 124,
+      "target": 826,
+      "value": 762411.9720000001
+    },
+    {
+      "index": 23,
+      "source": 124,
+      "target": 842,
+      "value": 54209751.162
+    },
+    {
+      "index": 24,
+      "source": 156,
+      "target": 36,
+      "value": 2182404.3649999998
+    },
+    {
+      "index": 25,
+      "source": 156,
+      "target": 124,
+      "value": 769398.477
+    },
+    {
+      "index": 26,
+      "source": 156,
+      "target": 251,
+      "value": 612019.898
+    },
+    {
+      "index": 27,
+      "source": 156,
+      "target": 276,
+      "value": 1192003.697
+    },
+    {
+      "index": 28,
+      "source": 156,
+      "target": 360,
+      "value": 3019655.0590000004
+    },
+    {
+      "index": 29,
+      "source": 156,
+      "target": 643,
+      "value": 838949.588
+    },
+    {
+      "index": 30,
+      "source": 156,
+      "target": 682,
+      "value": 296171.363
+    },
+    {
+      "index": 31,
+      "source": 156,
+      "target": 699,
+      "value": 5008835.837
+    },
+    {
+      "index": 32,
+      "source": 156,
+      "target": 710,
+      "value": 359183.582
+    },
+    {
+      "index": 33,
+      "source": 156,
+      "target": 784,
+      "value": 1096923.744
+    },
+    {
+      "index": 34,
+      "source": 156,
+      "target": 826,
+      "value": 1045988.909
+    },
+    {
+      "index": 35,
+      "source": 156,
+      "target": 842,
+      "value": 6274292.006
+    },
+    {
+      "index": 36,
+      "source": 251,
+      "target": 36,
+      "value": 209018.614
+    },
+    {
+      "index": 37,
+      "source": 251,
+      "target": 124,
+      "value": 71009.63799999999
+    },
+    {
+      "index": 38,
+      "source": 251,
+      "target": 156,
+      "value": 322302.872
+    },
+    {
+      "index": 39,
+      "source": 251,
+      "target": 276,
+      "value": 1634222.798
+    },
+    {
+      "index": 40,
+      "source": 251,
+      "target": 360,
+      "value": 46261.856999999996
+    },
+    {
+      "index": 41,
+      "source": 251,
+      "target": 643,
+      "value": 174040.15000000002
+    },
+    {
+      "index": 42,
+      "source": 251,
+      "target": 682,
+      "value": 84847.56199999999
+    },
+    {
+      "index": 43,
+      "source": 251,
+      "target": 699,
+      "value": 122081.378
+    },
+    {
+      "index": 44,
+      "source": 251,
+      "target": 710,
+      "value": 57079.905
+    },
+    {
+      "index": 45,
+      "source": 251,
+      "target": 784,
+      "value": 141345.225
+    },
+    {
+      "index": 46,
+      "source": 251,
+      "target": 826,
+      "value": 673231.093
+    },
+    {
+      "index": 47,
+      "source": 251,
+      "target": 842,
+      "value": 873740.4180000001
+    },
+    {
+      "index": 48,
+      "source": 276,
+      "target": 36,
+      "value": 197409.387
+    },
+    {
+      "index": 49,
+      "source": 276,
+      "target": 124,
+      "value": 159762.09
+    },
+    {
+      "index": 50,
+      "source": 276,
+      "target": 156,
+      "value": 2825079.102
+    },
+    {
+      "index": 51,
+      "source": 276,
+      "target": 251,
+      "value": 1947553.1439999999
+    },
+    {
+      "index": 52,
+      "source": 276,
+      "target": 360,
+      "value": 57140.79
+    },
+    {
+      "index": 53,
+      "source": 276,
+      "target": 643,
+      "value": 557423.015
+    },
+    {
+      "index": 54,
+      "source": 276,
+      "target": 682,
+      "value": 116562.065
+    },
+    {
+      "index": 55,
+      "source": 276,
+      "target": 699,
+      "value": 327048.183
+    },
+    {
+      "index": 56,
+      "source": 276,
+      "target": 710,
+      "value": 169615.739
+    },
+    {
+      "index": 57,
+      "source": 276,
+      "target": 784,
+      "value": 174182.552
+    },
+    {
+      "index": 58,
+      "source": 276,
+      "target": 826,
+      "value": 1015421.782
+    },
+    {
+      "index": 59,
+      "source": 276,
+      "target": 842,
+      "value": 1613308.083
+    },
+    {
+      "index": 60,
+      "source": 360,
+      "target": 36,
+      "value": 361659.786
+    },
+    {
+      "index": 61,
+      "source": 360,
+      "target": 124,
+      "value": 1086.433
+    },
+    {
+      "index": 62,
+      "source": 360,
+      "target": 156,
+      "value": 2701886.043
+    },
+    {
+      "index": 63,
+      "source": 360,
+      "target": 251,
+      "value": 9351.611
+    },
+    {
+      "index": 64,
+      "source": 360,
+      "target": 276,
+      "value": 186338.654
+    },
+    {
+      "index": 65,
+      "source": 360,
+      "target": 643,
+      "value": 17795.992000000002
+    },
+    {
+      "index": 66,
+      "source": 360,
+      "target": 682,
+      "value": 2682.685
+    },
+    {
+      "index": 67,
+      "source": 360,
+      "target": 699,
+      "value": 494254.806
+    },
+    {
+      "index": 68,
+      "source": 360,
+      "target": 710,
+      "value": 9201.372000000001
+    },
+    {
+      "index": 69,
+      "source": 360,
+      "target": 784,
+      "value": 9703.813
+    },
+    {
+      "index": 70,
+      "source": 360,
+      "target": 826,
+      "value": 6465.256
+    },
+    {
+      "index": 71,
+      "source": 360,
+      "target": 842,
+      "value": 168880.89
+    },
+    {
+      "index": 72,
+      "source": 643,
+      "target": 36,
+      "value": 30127.772999999997
+    },
+    {
+      "index": 73,
+      "source": 643,
+      "target": 124,
+      "value": 51708.19500000001
+    },
+    {
+      "index": 74,
+      "source": 643,
+      "target": 156,
+      "value": 28612560.427
+    },
+    {
+      "index": 75,
+      "source": 643,
+      "target": 251,
+      "value": 3386011.289
+    },
+    {
+      "index": 76,
+      "source": 643,
+      "target": 276,
+      "value": 8821037.431
+    },
+    {
+      "index": 77,
+      "source": 643,
+      "target": 360,
+      "value": 34421.222
+    },
+    {
+      "index": 78,
+      "source": 643,
+      "target": 682,
+      "value": 396426.37899999996
+    },
+    {
+      "index": 79,
+      "source": 643,
+      "target": 699,
+      "value": 619136.778
+    },
+    {
+      "index": 80,
+      "source": 643,
+      "target": 710,
+      "value": 55686.323000000004
+    },
+    {
+      "index": 81,
+      "source": 643,
+      "target": 784,
+      "value": 928579.1009999999
+    },
+    {
+      "index": 82,
+      "source": 643,
+      "target": 826,
+      "value": 3096468.48
+    },
+    {
+      "index": 83,
+      "source": 643,
+      "target": 842,
+      "value": 5760348.539
+    },
+    {
+      "index": 84,
+      "source": 682,
+      "target": 36,
+      "value": 127.494
+    },
+    {
+      "index": 85,
+      "source": 682,
+      "target": 124,
+      "value": 51865.035
+    },
+    {
+      "index": 86,
+      "source": 682,
+      "target": 156,
+      "value": 25126952.762000002
+    },
+    {
+      "index": 87,
+      "source": 682,
+      "target": 251,
+      "value": 2758421.429
+    },
+    {
+      "index": 88,
+      "source": 682,
+      "target": 276,
+      "value": 527087.1819999999
+    },
+    {
+      "index": 89,
+      "source": 682,
+      "target": 360,
+      "value": 1696030.885
+    },
+    {
+      "index": 90,
+      "source": 682,
+      "target": 643,
+      "value": 240.284
+    },
+    {
+      "index": 91,
+      "source": 682,
+      "target": 699,
+      "value": 11338964.993
+    },
+    {
+      "index": 92,
+      "source": 682,
+      "target": 710,
+      "value": 2269035.497
+    },
+    {
+      "index": 93,
+      "source": 682,
+      "target": 784,
+      "value": 697841.7390000001
+    },
+    {
+      "index": 94,
+      "source": 682,
+      "target": 826,
+      "value": 846517.3589999999
+    },
+    {
+      "index": 95,
+      "source": 682,
+      "target": 842,
+      "value": 7048545.095
+    },
+    {
+      "index": 96,
+      "source": 699,
+      "target": 36,
+      "value": 938837.5290000001
+    },
+    {
+      "index": 97,
+      "source": 699,
+      "target": 124,
+      "value": 59525.144
+    },
+    {
+      "index": 98,
+      "source": 699,
+      "target": 156,
+      "value": 4839099.311
+    },
+    {
+      "index": 99,
+      "source": 699,
+      "target": 251,
+      "value": 450816.46800000005
+    },
+    {
+      "index": 100,
+      "source": 699,
+      "target": 276,
+      "value": 92354.906
+    },
+    {
+      "index": 101,
+      "source": 699,
+      "target": 360,
+      "value": 205878.808
+    },
+    {
+      "index": 102,
+      "source": 699,
+      "target": 643,
+      "value": 36967.390999999996
+    },
+    {
+      "index": 103,
+      "source": 699,
+      "target": 682,
+      "value": 626058.8720000001
+    },
+    {
+      "index": 104,
+      "source": 699,
+      "target": 710,
+      "value": 603551.696
+    },
+    {
+      "index": 105,
+      "source": 699,
+      "target": 784,
+      "value": 3027226.552
+    },
+    {
+      "index": 106,
+      "source": 699,
+      "target": 826,
+      "value": 411911.531
+    },
+    {
+      "index": 107,
+      "source": 699,
+      "target": 842,
+      "value": 1992701.7120000003
+    },
+    {
+      "index": 108,
+      "source": 710,
+      "target": 36,
+      "value": 22686.029000000002
+    },
+    {
+      "index": 109,
+      "source": 710,
+      "target": 124,
+      "value": 26646.06
+    },
+    {
+      "index": 110,
+      "source": 710,
+      "target": 156,
+      "value": 4379475.2469999995
+    },
+    {
+      "index": 111,
+      "source": 710,
+      "target": 251,
+      "value": 57793.189999999995
+    },
+    {
+      "index": 112,
+      "source": 710,
+      "target": 276,
+      "value": 1173362.8769999999
+    },
+    {
+      "index": 113,
+      "source": 710,
+      "target": 360,
+      "value": 59898.43199999999
+    },
+    {
+      "index": 114,
+      "source": 710,
+      "target": 643,
+      "value": 143912.042
+    },
+    {
+      "index": 115,
+      "source": 710,
+      "target": 682,
+      "value": 30881.703
+    },
+    {
+      "index": 116,
+      "source": 710,
+      "target": 699,
+      "value": 400175.09500000003
+    },
+    {
+      "index": 117,
+      "source": 710,
+      "target": 784,
+      "value": 45523.177
+    },
+    {
+      "index": 118,
+      "source": 710,
+      "target": 826,
+      "value": 126629.033
+    },
+    {
+      "index": 119,
+      "source": 710,
+      "target": 842,
+      "value": 250774.045
+    },
+    {
+      "index": 120,
+      "source": 784,
+      "target": 36,
+      "value": 860562.155
+    },
+    {
+      "index": 121,
+      "source": 784,
+      "target": 124,
+      "value": 17423.229000000003
+    },
+    {
+      "index": 122,
+      "source": 784,
+      "target": 156,
+      "value": 9042653.867
+    },
+    {
+      "index": 123,
+      "source": 784,
+      "target": 251,
+      "value": 545477.508
+    },
+    {
+      "index": 124,
+      "source": 784,
+      "target": 276,
+      "value": 5968.839
+    },
+    {
+      "index": 125,
+      "source": 784,
+      "target": 360,
+      "value": 399781.27800000005
+    },
+    {
+      "index": 126,
+      "source": 784,
+      "target": 643,
+      "value": 4912.214
+    },
+    {
+      "index": 127,
+      "source": 784,
+      "target": 682,
+      "value": 929489.686
+    },
+    {
+      "index": 128,
+      "source": 784,
+      "target": 699,
+      "value": 7638216.279999999
+    },
+    {
+      "index": 129,
+      "source": 784,
+      "target": 710,
+      "value": 970346.429
+    },
+    {
+      "index": 130,
+      "source": 784,
+      "target": 826,
+      "value": 398996.77699999994
+    },
+    {
+      "index": 131,
+      "source": 784,
+      "target": 842,
+      "value": 475125.063
+    },
+    {
+      "index": 132,
+      "source": 826,
+      "target": 36,
+      "value": 132203.451
+    },
+    {
+      "index": 133,
+      "source": 826,
+      "target": 124,
+      "value": 170768.241
+    },
+    {
+      "index": 134,
+      "source": 826,
+      "target": 156,
+      "value": 2400444.254
+    },
+    {
+      "index": 135,
+      "source": 826,
+      "target": 251,
+      "value": 1008637.9550000001
+    },
+    {
+      "index": 136,
+      "source": 826,
+      "target": 276,
+      "value": 2939516.409
+    },
+    {
+      "index": 137,
+      "source": 826,
+      "target": 360,
+      "value": 15076.662999999999
+    },
+    {
+      "index": 138,
+      "source": 826,
+      "target": 643,
+      "value": 122057.23700000001
+    },
+    {
+      "index": 139,
+      "source": 826,
+      "target": 682,
+      "value": 64071.727
+    },
+    {
+      "index": 140,
+      "source": 826,
+      "target": 699,
+      "value": 118502.084
+    },
+    {
+      "index": 141,
+      "source": 826,
+      "target": 710,
+      "value": 85601.319
+    },
+    {
+      "index": 142,
+      "source": 826,
+      "target": 784,
+      "value": 131722.291
+    },
+    {
+      "index": 143,
+      "source": 826,
+      "target": 842,
+      "value": 1930237.1539999999
+    },
+    {
+      "index": 144,
+      "source": 842,
+      "target": 36,
+      "value": 1462211.328
+    },
+    {
+      "index": 145,
+      "source": 842,
+      "target": 124,
+      "value": 16578724.941
+    },
+    {
+      "index": 146,
+      "source": 842,
+      "target": 156,
+      "value": 9375494.219
+    },
+    {
+      "index": 147,
+      "source": 842,
+      "target": 251,
+      "value": 3061963.989
+    },
+    {
+      "index": 148,
+      "source": 842,
+      "target": 276,
+      "value": 4688208.0030000005
+    },
+    {
+      "index": 149,
+      "source": 842,
+      "target": 360,
+      "value": 491303.012
+    },
+    {
+      "index": 150,
+      "source": 842,
+      "target": 643,
+      "value": 133579.484
+    },
+    {
+      "index": 151,
+      "source": 842,
+      "target": 682,
+      "value": 267131.7
+    },
+    {
+      "index": 152,
+      "source": 842,
+      "target": 699,
+      "value": 4833192.902
+    },
+    {
+      "index": 153,
+      "source": 842,
+      "target": 710,
+      "value": 370201.024
+    },
+    {
+      "index": 154,
+      "source": 842,
+      "target": 784,
+      "value": 694724.113
+    },
+    {
+      "index": 155,
+      "source": 842,
+      "target": 826,
+      "value": 5043019.455999999
+    }
+  ],
+  "nodes": [
+    {
+      "nodeIndex": 0,
+      "country_code": 36,
+      "country_name_abbreviation": "Australia"
+    },
+    {
+      "nodeIndex": 1,
+      "country_code": 124,
+      "country_name_abbreviation": "Canada"
+    },
+    {
+      "nodeIndex": 2,
+      "country_code": 156,
+      "country_name_abbreviation": "China"
+    },
+    {
+      "nodeIndex": 3,
+      "country_code": 251,
+      "country_name_abbreviation": "France"
+    },
+    {
+      "nodeIndex": 4,
+      "country_code": 276,
+      "country_name_abbreviation": "Germany"
+    },
+    {
+      "nodeIndex": 5,
+      "country_code": 360,
+      "country_name_abbreviation": "Indonesia"
+    },
+    {
+      "nodeIndex": 6,
+      "country_code": 643,
+      "country_name_abbreviation": "Russian Federation"
+    },
+    {
+      "nodeIndex": 7,
+      "country_code": 682,
+      "country_name_abbreviation": "Saudi Arabia"
+    },
+    {
+      "nodeIndex": 8,
+      "country_code": 699,
+      "country_name_abbreviation": "India"
+    },
+    {
+      "nodeIndex": 9,
+      "country_code": 710,
+      "country_name_abbreviation": "South Africa"
+    },
+    {
+      "nodeIndex": 10,
+      "country_code": 784,
+      "country_name_abbreviation": "United Arab Emirates"
+    },
+    {
+      "nodeIndex": 11,
+      "country_code": 826,
+      "country_name_abbreviation": "United Kingdom"
+    },
+    {
+      "nodeIndex": 12,
+      "country_code": 842,
+      "country_name_abbreviation": "USA"
+    }
+  ]
+}

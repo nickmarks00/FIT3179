@@ -25,6 +25,7 @@ product_codes = list(map(int, product_df['code'].tolist()))
 
 # Filter country codes
 country_cleaned = country_df[country_df['country_name_abbreviation'].isin(country_list)]
+country_cleaned = country_cleaned.reset_index(drop=True)
 
 # Filter trades
 trade_df = trade_df[(trade_df['i'].isin(country_cleaned['country_code'])) & (trade_df['j'].isin(country_cleaned['country_code']))]

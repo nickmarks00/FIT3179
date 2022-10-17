@@ -941,106 +941,67 @@
     {
       "nodeIndex": 0,
       "country_code": 36,
-      "country_name_abbreviation": "Australia",
-      "country_name_full": "Australia",
-      "iso_2digit_alpha": "AU",
-      "iso_3digit_alpha": "AUS"
+      "country_name_abbreviation": "Australia"
     },
     {
       "nodeIndex": 1,
       "country_code": 124,
-      "country_name_abbreviation": "Canada",
-      "country_name_full": "Canada",
-      "iso_2digit_alpha": "CA",
-      "iso_3digit_alpha": "CAN"
+      "country_name_abbreviation": "Canada"
     },
     {
       "nodeIndex": 2,
       "country_code": 156,
-      "country_name_abbreviation": "China",
-      "country_name_full": "China",
-      "iso_2digit_alpha": "CN",
-      "iso_3digit_alpha": "CHN"
+      "country_name_abbreviation": "China"
     },
     {
       "nodeIndex": 3,
       "country_code": 251,
-      "country_name_abbreviation": "France",
-      "country_name_full": "France, Monaco",
-      "iso_2digit_alpha": "FR",
-      "iso_3digit_alpha": "FRA"
+      "country_name_abbreviation": "France"
     },
     {
       "nodeIndex": 4,
       "country_code": 276,
-      "country_name_abbreviation": "Germany",
-      "country_name_full": "Germany",
-      "iso_2digit_alpha": "DE",
-      "iso_3digit_alpha": "DEU"
+      "country_name_abbreviation": "Germany"
     },
     {
       "nodeIndex": 5,
       "country_code": 360,
-      "country_name_abbreviation": "Indonesia",
-      "country_name_full": "Indonesia",
-      "iso_2digit_alpha": "ID",
-      "iso_3digit_alpha": "IDN"
+      "country_name_abbreviation": "Indonesia"
     },
     {
       "nodeIndex": 6,
       "country_code": 643,
-      "country_name_abbreviation": "Russian Federation",
-      "country_name_full": "Russian Federation",
-      "iso_2digit_alpha": "RU",
-      "iso_3digit_alpha": "RUS"
+      "country_name_abbreviation": "Russian Federation"
     },
     {
       "nodeIndex": 7,
       "country_code": 682,
-      "country_name_abbreviation": "Saudi Arabia",
-      "country_name_full": "Saudi Arabia",
-      "iso_2digit_alpha": "SA",
-      "iso_3digit_alpha": "SAU"
+      "country_name_abbreviation": "Saudi Arabia"
     },
     {
       "nodeIndex": 8,
       "country_code": 699,
-      "country_name_abbreviation": "India",
-      "country_name_full": "India",
-      "iso_2digit_alpha": "IN",
-      "iso_3digit_alpha": "IND"
+      "country_name_abbreviation": "India"
     },
     {
       "nodeIndex": 9,
       "country_code": 710,
-      "country_name_abbreviation": "South Africa",
-      "country_name_full": "South Africa",
-      "iso_2digit_alpha": "ZA",
-      "iso_3digit_alpha": "ZAF"
+      "country_name_abbreviation": "South Africa"
     },
     {
       "nodeIndex": 10,
       "country_code": 784,
-      "country_name_abbreviation": "United Arab Emirates",
-      "country_name_full": "United Arab Emirates",
-      "iso_2digit_alpha": "AE",
-      "iso_3digit_alpha": "ARE"
+      "country_name_abbreviation": "United Arab Emirates"
     },
     {
       "nodeIndex": 11,
       "country_code": 826,
-      "country_name_abbreviation": "United Kingdom",
-      "country_name_full": "United Kingdom",
-      "iso_2digit_alpha": "GB",
-      "iso_3digit_alpha": "GBR"
+      "country_name_abbreviation": "United Kingdom"
     },
     {
       "nodeIndex": 12,
       "country_code": 842,
-      "country_name_abbreviation": "USA",
-      "country_name_full": "USA, Puerto Rico and US Virgin Islands",
-      "iso_2digit_alpha": "US",
-      "iso_3digit_alpha": "USA"
+      "country_name_abbreviation": "USA"
     }
   ]
 }

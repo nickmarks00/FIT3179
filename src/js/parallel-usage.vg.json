@@ -99,25 +99,25 @@
             "type": "quantitative",
             "title": "GDP per capita ($USD)",
             "field": "4: GDP (USD$/per capita)",
-            "format": ".0f"
+            "format": ",.0f"
           },
           {
             "type": "quantitative",
             "title": "Fossil fuel energy usage per capita (kWh)",
             "field": "1: Fossil Fuels (kWh)",
-            "format": ".0f"
+            "format": ",.0f"
           },
           {
             "type": "quantitative",
             "title": "Renewable fuel energy usage per capita (kWh)",
             "field": "2: Renewable (kWh)",
-            "format": ".0f"
+            "format": ",.0f"
           },
           {
             "type": "quantitative",
             "title": "Nuclear fuel energy usage per capita (kWh)",
             "field": "3: Nuclear (kWh)",
-            "format": ".0f"
+            "format": ",.0f"
           }
         ]
       }

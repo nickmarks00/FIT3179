@@ -1,0 +1,164 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "title": "Exports and Imports from 2020",
+  "width": 600,
+  "height": 600,
+  "signals": [
+    { "name": "cellSize", "value": 30 },
+    { "name": "count", "update": "length(data('nodes'))" },
+    { "name": "width", "update": "span(range('position'))" },
+    { "name": "height", "update": "width" },
+    {
+      "name": "src",
+      "value": {},
+      "on": [
+        { "events": "text:mousedown", "update": "datum" },
+        { "events": "window:mouseup", "update": "{}" }
+      ]
+    },
+    {
+      "name": "dest",
+      "value": -1,
+      "on": [
+        {
+          "events": "[@columns:mousedown, window:mouseup] > window:mousemove",
+          "update": "src.country_name_abbreviation && datum !== src ? (0.5 + count * clamp(x(), 0, width) / width) : dest"
+        },
+        {
+          "events": "[@rows:mousedown, window:mouseup] > window:mousemove",
+          "update": "src.country_name_abbreviation && datum !== src ? (0.5 + count * clamp(y(), 0, height) / height) : dest"
+        },
+        { "events": "window:mouseup", "update": "-1" }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "nodes",
+      "url": "/../data/country_nodes.csv",
+      "format": { "type": "csv", "property": "nodes" },
+      "transform": [
+        {
+          "type": "formula",
+          "as": "order",
+          "expr": "datum.v"
+        },
+        {
+          "type": "formula",
+          "as": "score",
+          "expr": "dest >= 0 && datum === src ? dest : datum.order"
+        },
+        {
+          "type": "window",
+          "sort": { "field": "score" },
+          "ops": ["row_number"],
+          "as": ["order"]
+        }
+      ]
+    },
+    {
+      "name": "edges",
+      "url": "/../data/2020_trades.csv",
+      "format": { "type": "csv", "property": "links" },
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "nodes",
+          "key": "index",
+          "fields": ["i", "j"],
+          "as": ["sourceNode", "targetNode"]
+        }
+      ]
+    },
+    {
+      "name": "cross",
+      "source": "nodes",
+      "transform": [{ "type": "cross" }]
+    }
+  ],
+  "scales": [
+    {
+      "name": "position",
+      "type": "band",
+      "domain": { "data": "nodes", "field": "country_code", "sort": true },
+      "range": { "step": { "signal": "cellSize" } }
+    },
+    {
+      "name": "color",
+      "type": "sequential",
+      "range": "heatmap",
+      "domain": {
+        "fields": [{ "data": "edges", "field": "v" }, { "signal": "count" }],
+        "sort": true
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": { "data": "cross" },
+      "encode": {
+        "update": {
+          "x": { "scale": "position", "field": "a.country_code" },
+          "y": { "scale": "position", "field": "b.country_code" },
+          "width": { "scale": "position", "band": 1, "offset": -1 },
+          "height": { "scale": "position", "band": 1, "offset": -1 },
+          "fill": [
+            { "test": "datum.a === src || datum.b === src", "value": "#ddd" },
+            { "value": "#f5f5f5" }
+          ]
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": { "data": "edges" },
+      "encode": {
+        "x": { "scale": "position", "field": "targetNode.country_code" },
+        "y": { "scale": "position", "field": "sourceNode.country_code" },
+        "width": { "scale": "position", "band": 1, "offset": -1 },
+        "height": { "scale": "position", "band": 1, "offset": -1 },
+        "fill": { "type": "sequential", "scale": "color", "field": "v" }
+      }
+    },
+    {
+      "type": "text",
+      "name": "columns",
+      "from": { "data": "nodes" },
+      "encode": {
+        "update": {
+          "x": { "scale": "position", "field": "country_code", "band": 0.5 },
+          "y": { "offset": -2 },
+          "text": { "field": "country_name_abbreviation" },
+          "fontSize": { "value": 10 },
+          "angle": { "value": -90 },
+          "align": { "value": "left" },
+          "baseline": { "value": "middle" },
+          "fill": [
+            { "test": "datum === src", "value": "steelblue" },
+            { "value": "black" }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "rows",
+      "from": { "data": "nodes" },
+      "encode": {
+        "update": {
+          "x": { "offset": -2 },
+          "y": { "scale": "position", "field": "country_code", "band": 0.5 },
+          "text": { "field": "country_name_abbreviation" },
+          "fontSize": { "value": 10 },
+          "align": { "value": "right" },
+          "baseline": { "value": "middle" },
+          "fill": [
+            { "test": "datum === src", "value": "steelblue" },
+            { "value": "black" }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Some description",
+  "title": "Energy usage by type compared to country GDP per capita",
   "data": {
     "name": "Energy",
-    "url": "/src/data/parallel.csv"
+    "url": "src/data/parallel.csv"
   },
   "width": "container",
   "height": 400,

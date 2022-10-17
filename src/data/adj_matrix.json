@@ -939,7 +939,7 @@
   ],
   "nodes": [
     {
-      "index": 0,
+      "nodeIndex": 0,
       "country_code": 36,
       "country_name_abbreviation": "Australia",
       "country_name_full": "Australia",
@@ -947,7 +947,7 @@
       "iso_3digit_alpha": "AUS"
     },
     {
-      "index": 1,
+      "nodeIndex": 1,
       "country_code": 124,
       "country_name_abbreviation": "Canada",
       "country_name_full": "Canada",
@@ -955,7 +955,7 @@
       "iso_3digit_alpha": "CAN"
     },
     {
-      "index": 2,
+      "nodeIndex": 2,
       "country_code": 156,
       "country_name_abbreviation": "China",
       "country_name_full": "China",
@@ -963,7 +963,7 @@
       "iso_3digit_alpha": "CHN"
     },
     {
-      "index": 3,
+      "nodeIndex": 3,
       "country_code": 251,
       "country_name_abbreviation": "France",
       "country_name_full": "France, Monaco",
@@ -971,7 +971,7 @@
       "iso_3digit_alpha": "FRA"
     },
     {
-      "index": 4,
+      "nodeIndex": 4,
       "country_code": 276,
       "country_name_abbreviation": "Germany",
       "country_name_full": "Germany",
@@ -979,7 +979,7 @@
       "iso_3digit_alpha": "DEU"
     },
     {
-      "index": 5,
+      "nodeIndex": 5,
       "country_code": 360,
       "country_name_abbreviation": "Indonesia",
       "country_name_full": "Indonesia",
@@ -987,7 +987,7 @@
       "iso_3digit_alpha": "IDN"
     },
     {
-      "index": 6,
+      "nodeIndex": 6,
       "country_code": 643,
       "country_name_abbreviation": "Russian Federation",
       "country_name_full": "Russian Federation",
@@ -995,7 +995,7 @@
       "iso_3digit_alpha": "RUS"
     },
     {
-      "index": 7,
+      "nodeIndex": 7,
       "country_code": 682,
       "country_name_abbreviation": "Saudi Arabia",
       "country_name_full": "Saudi Arabia",
@@ -1003,7 +1003,7 @@
       "iso_3digit_alpha": "SAU"
     },
     {
-      "index": 8,
+      "nodeIndex": 8,
       "country_code": 699,
       "country_name_abbreviation": "India",
       "country_name_full": "India",
@@ -1011,7 +1011,7 @@
       "iso_3digit_alpha": "IND"
     },
     {
-      "index": 9,
+      "nodeIndex": 9,
       "country_code": 710,
       "country_name_abbreviation": "South Africa",
       "country_name_full": "South Africa",
@@ -1019,7 +1019,7 @@
       "iso_3digit_alpha": "ZAF"
     },
     {
-      "index": 10,
+      "nodeIndex": 10,
       "country_code": 784,
       "country_name_abbreviation": "United Arab Emirates",
       "country_name_full": "United Arab Emirates",
@@ -1027,7 +1027,7 @@
       "iso_3digit_alpha": "ARE"
     },
     {
-      "index": 11,
+      "nodeIndex": 11,
       "country_code": 826,
       "country_name_abbreviation": "United Kingdom",
       "country_name_full": "United Kingdom",
@@ -1035,7 +1035,7 @@
       "iso_3digit_alpha": "GBR"
     },
     {
-      "index": 12,
+      "nodeIndex": 12,
       "country_code": 842,
       "country_name_abbreviation": "USA",
       "country_name_full": "USA, Puerto Rico and US Virgin Islands",

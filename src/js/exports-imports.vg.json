@@ -35,12 +35,12 @@
   "data": [
     {
       "name": "nodes",
-      "url": "/../data/country_nodes.csv",
+      "url": "https://raw.githubusercontent.com/nickmarks00/FIT3179/main/src/data/country_nodes.csv",
       "format": { "type": "csv", "property": "nodes" }
     },
     {
       "name": "edges",
-      "url": "/../data/2020_trades.csv",
+      "url": "https://raw.githubusercontent.com/nickmarks00/FIT3179/main/src/data/2020_trades.csv",
       "format": { "type": "csv", "property": "links" },
       "transform": [
         {
@@ -101,7 +101,10 @@
           "y": { "scale": "position", "field": "sourceNode.index" },
           "width": { "scale": "position", "band": 1, "offset": -1 },
           "height": { "scale": "position", "band": 1, "offset": -1 },
-          "fill": { "type": "sequential", "scale": "color", "field": "v" }
+          "fill": { "type": "sequential", "scale": "color", "field": "v" },
+          "tooltip": {
+            "signal": "{title: datum.sourceNode.country_name_abbreviation + '➡️' + datum.targetNode.country_name_abbreviation, 'Value of trade (millions)': 'USD$' + format(datum.v, ',.0f')}"
+          }
         }
       }
     },
@@ -143,6 +146,15 @@
           ]
         }
       }
+    }
+  ],
+  "legends": [
+    {
+      "title": "Trade of energy (USD millions)",
+      "fill": "color",
+      "type": "gradient",
+      "format": ",.0f",
+      "gradientLength": { "signal": "clamp(height, 64, 200)" }
     }
   ]
 }

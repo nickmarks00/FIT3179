@@ -1,0 +1,250 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Energy usage by type compared to country GDP per capita",
+  "data": {
+    "name": "Energy",
+    "url": "../data/parallel.csv"
+  },
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2019,
+      "bind": {
+        "input": "range",
+        "min": 1995,
+        "max": 2020,
+        "step": 1,
+        "name": "Year:   "
+      }
+    },
+    {
+      "name": "continent_select",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America"
+        ],
+        "name": "Continent (select):  "
+      }
+    }
+  ],
+  "transform": [
+    { "filter": "datum['4: GDP (USD$/per capita)']" },
+    {
+      "filter": "continent_select == null || datum['Continent/region'] == continent_select"
+    },
+    { "window": [{ "op": "count", "as": "index" }] },
+    {
+      "fold": [
+        "1: Fossil Fuels (kWh)",
+        "3: Nuclear (kWh)",
+        "2: Renewable (kWh)",
+        "4: GDP (USD$/per capita)"
+      ]
+    },
+    {
+      "joinaggregate": [
+        { "op": "min", "field": "value", "as": "min" },
+        { "op": "mean", "field": "value", "as": "mid" },
+        { "op": "max", "field": "value", "as": "max" }
+      ],
+      "groupby": ["key"]
+    },
+    {
+      "calculate": "(datum.value - datum.min) / (datum.max-datum.min)",
+      "as": "norm_val"
+    },
+    { "filter": "datum.Year == Year_selection" }
+  ],
+  "vconcat": [
+    {
+      "projection": {
+        "type": "equalEarth",
+        "rotate": [-150, 0, 0]
+      },
+      "width": 400,
+      "layer": [
+        {
+          "mark": { "type": "rule", "color": "#ccc" },
+          "encoding": {
+            "detail": { "aggregate": "count" },
+            "x": { "field": "key" }
+          }
+        },
+        {
+          "mark": "line",
+          "encoding": {
+            "color": { "type": "nominal", "field": "Continent/region" },
+            "detail": { "type": "nominal", "field": "index" },
+            "opacity": { "value": 0.65 },
+            "x": { "type": "nominal", "field": "key" },
+            "y": { "type": "quantitative", "field": "value", "axis": null },
+            "tooltip": [
+              {
+                "field": "Entity",
+                "title": "Country",
+                "type": "nominal"
+              },
+              {
+                "type": "quantitative",
+                "title": "GDP per capita ($USD)",
+                "field": "4: GDP (USD$/per capita)",
+                "format": ".0f"
+              },
+              {
+                "type": "quantitative",
+                "title": "Fossil fuel energy usage per capita (kWh)",
+                "field": "1: Fossil Fuels (kWh)",
+                "format": ".0f"
+              },
+              {
+                "type": "quantitative",
+                "title": "Renewable fuel energy usage per capita (kWh)",
+                "field": "2: Renewable (kWh)",
+                "format": ".0f"
+              },
+              {
+                "type": "quantitative",
+                "title": "Nuclear fuel energy usage per capita (kWh)",
+                "field": "3: Nuclear (kWh)",
+                "format": ".0f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx": -12,
+            "fontSize": 11.5,
+            "fontStyle": "italic"
+          },
+          "encoding": {
+            "text": { "field": "Country", "type": "nominal" },
+            "color": { "value": "black" },
+            "opacity": {
+              "condition": {
+                "test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen' || datum['Country'] == 'United States'",
+                "value": 1
+              },
+              "value": 0
+            }
+          }
+        },
+        {
+          "encoding": {
+            "x": { "type": "nominal", "field": "key" },
+            "y": { "value": 0 }
+          },
+          "layer": [
+            {
+              "mark": { "type": "text", "style": "label" },
+              "encoding": {
+                "text": { "aggregate": "max", "field": "max", "format": ".0f" }
+              }
+            },
+            {
+              "mark": {
+                "type": "tick",
+                "style": "tick",
+                "size": 8,
+                "color": "#ccc"
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "x": { "type": "nominal", "field": "key" },
+            "y": { "value": 150 }
+          },
+          "layer": [
+            {
+              "mark": { "type": "text", "style": "label" },
+              "encoding": {
+                "text": { "aggregate": "max", "field": "mid", "format": ".0f" }
+              }
+            },
+            {
+              "mark": {
+                "type": "tick",
+                "style": "tick",
+                "size": 8,
+                "color": "#ccc"
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "x": { "type": "nominal", "field": "key" },
+            "y": { "value": 300 }
+          },
+          "layer": [
+            {
+              "mark": { "type": "text", "style": "label" },
+              "encoding": {
+                "text": { "aggregate": "min", "field": "min", "format": ".0f" }
+              }
+            },
+            {
+              "mark": {
+                "type": "tick",
+                "style": "tick",
+                "size": 8,
+                "color": "#ccc"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/nickmarks00/FIT3179/main/src/data/global-data-cleaned.csv"
+      },
+      "height": 80,
+      "width": 400,
+      "mark": "area",
+      "title": "Use this area plot to brush through over time",
+      "params": [
+        {
+          "name": "time_brush",
+          "select": { "type": "point", "encodings": ["x"] }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "timeUnit": "year",
+          "axis": { "title": "Year", "format": "%Y" }
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "Energy"
+        },
+        "color": {
+          "field": "Type",
+          "scale": { "scheme": "accent" }
+        }
+      }
+    }
+  ]
+}

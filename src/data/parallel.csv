@@ -1,4 +1,4 @@
-,Entity,Code_x,Year,Annual consumption-based CO2 emissions (per capita),4 - GDP,Population (historical estimates),Continent_x,Code_y,1 - Fossil Fuels,3 - Nuclear,2 - Renewable,Continent/region
+,Entity,Code_x,Year,Annual consumption-based CO2 emissions (per capita),4: GDP (USD$/per capita),Population (historical estimates),Continent_x,Code_y,1: Fossil Fuels (kWh),3: Nuclear (kWh),2: Renewable (kWh),Continent/region
 0,Afghanistan,AFG,2002,,1189.78466796875,21000258.0,,AFG,6.190400123596191,0.0,26.666339874267575,Asia
 1,Afghanistan,AFG,2003,,1235.81005859375,22645136.0,,AFG,13.68947410583496,0.0,27.82054328918457,Asia
 2,Afghanistan,AFG,2004,,1200.2779541015625,23553554.0,,AFG,14.010624885559082,0.0,23.775606155395508,Asia

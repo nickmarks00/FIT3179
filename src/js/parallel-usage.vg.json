@@ -3,9 +3,9 @@
   "title": "Energy usage by type compared to country GDP per capita",
   "data": {
     "name": "Energy",
-    "url": "src/data/parallel.csv"
+    "url": "../data/parallel.csv"
   },
-  "width": "container",
+  "width": 800,
   "height": 400,
   "params": [
     {
@@ -46,13 +46,18 @@
     }
   ],
   "transform": [
-    { "filter": "datum['4 - GDP']" },
+    { "filter": "datum['4: GDP (USD$/per capita)']" },
     {
       "filter": "continent_select == null || datum['Continent/region'] == continent_select"
     },
     { "window": [{ "op": "count", "as": "index" }] },
     {
-      "fold": ["1 - Fossil Fuels", "3 - Nuclear", "2 - Renewable", "4 - GDP"]
+      "fold": [
+        "1: Fossil Fuels (kWh)",
+        "3: Nuclear (kWh)",
+        "2: Renewable (kWh)",
+        "4: GDP (USD$/per capita)"
+      ]
     },
     {
       "joinaggregate": [
@@ -93,25 +98,25 @@
           {
             "type": "quantitative",
             "title": "GDP per capita ($USD)",
-            "field": "4 - GDP",
+            "field": "4: GDP (USD$/per capita)",
             "format": ".0f"
           },
           {
             "type": "quantitative",
             "title": "Fossil fuel energy usage per capita (kWh)",
-            "field": "1 - Fossil Fuels",
+            "field": "1: Fossil Fuels (kWh)",
             "format": ".0f"
           },
           {
             "type": "quantitative",
             "title": "Renewable fuel energy usage per capita (kWh)",
-            "field": "2 - Renewable",
+            "field": "2: Renewable (kWh)",
             "format": ".0f"
           },
           {
             "type": "quantitative",
             "title": "Nuclear fuel energy usage per capita (kWh)",
-            "field": "3 - Nuclear",
+            "field": "3: Nuclear (kWh)",
             "format": ".0f"
           }
         ]
@@ -214,7 +219,7 @@
     },
     "view": { "stroke": null },
     "style": {
-      "label": { "baseline": "middle", "align": "right", "dx": -5 },
+      "label": { "baseline": "middle", "align": "left", "dx": 5 },
       "tick": { "orient": "horizontal" }
     }
   }
